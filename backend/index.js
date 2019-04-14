@@ -24,7 +24,7 @@ const go = async () => {
 go();
 
 // TODO
-// Add spotify listeners or any third thing
+// Add Youtube listeners or any third thing
 // Error handled failed requests, no insta or whatever
 // Add frontend with input for dynamic username
 
