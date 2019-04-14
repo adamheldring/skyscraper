@@ -9,10 +9,8 @@ export const getHTML = async url => {
 export const getTwitterFollowers = async html => {
   const $ = cheerio.load(html);
   const el = $("a[data-nav='followers'] span[class='ProfileNav-value']");
-
-  console.log("Getting Twitter followers...");
-  const followers = el.data("count");
-  return followers;
+  const twFollowers = el.data("count");
+  return twFollowers;
 };
 
 export const getInstagramFollowers = async html => {
@@ -26,9 +24,8 @@ export const getInstagramFollowers = async html => {
   const countObject = JSON.parse(
     dataAsString.slice(indexOfCountObjectStart, indexOfCountObjectEnd + 1)
   );
-
-  console.log("Getting Instagram followers...");
-  return countObject.count;
+  const instaFollowers = countObject.count;
+  return instaFollowers;
 };
 
 // const getMonthlySpotifyListeners = html => {
